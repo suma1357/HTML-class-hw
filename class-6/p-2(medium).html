@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact with Us</h1>
+    <form action="/contact" method="POST">
+    <p>Fill up the form below, we will get back to you as soon as possible.</p>
+
+    <from action="/contact" method="POST">
+    <fieldset>
+    <legend>Contact Form</legend>
+
+    <p>
+    <label for="name">Full Name:</label><br/>
+    <input type="text" id="name" name="name" required>
+    </p>
+    <p>
+    <label for="email">Email:</label><br/>
+    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+    </p>
+    <p>
+    <label for="phone">Phone Number:</label><br/>
+    <input type="tel" id="phone" name="phone" required placeholder="123-456-7890">
+    </p>
+    <fieldset/>
+
+    <fieldset>
+    <legend>Message</legend>
+    <p>
+    <label for="subject">Subject:</label><br/>
+    <select id="subject" name="subject" required>
+    <option value="">Select a subject</option>
+    <option value="general">General Inquiry</option>
+    <option value="support">Support Request</option>
+    <option value="feedback">Feedback</option>
+    </select>
+    </p>
+    <p>
+    <label for="message">YourMessage:</label><br/>
+    <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+    </p>
+    </fieldset>
+    <button type="submit" value="Send Message">Send Message</button>
+    <button type="reset" value="Reset Form">Reset Form</button>
+    </form>
+</body>
+</html>

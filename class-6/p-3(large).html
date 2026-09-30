@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Open new account</h1>
+
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <fieldset>
+        <legend>Personal Information</legend>
+        <p>
+        <label for="name">Full Name:</label><br/>
+        <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </p>
+
+        <p>
+        <label for="phone">Confirm Password:</label><br/>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9],(11)" placeholder="123-456-7890">
+        </p>
+       <p>
+        <label for="password">Password:</label><br/>
+        <input type="password" id="password" name="password" required minlength="6">
+        </p>
+        <p>
+        <label for="bob">Birth Date:</label><br/>
+        <input type="date" id="bob" name="bob" required>
+        </p>
+        </fieldset>
+
+        <fieldset>
+        <legend>Others</legend>
+
+        <p>
+        <label for="gender">Gender:</label><br/>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        </p>
+
+        <p>
+        <label for="profile_picture">Profile Picture:</label><br/>
+        <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+        </p>
+
+        <p>
+        <label for="city">City:</label><br/>
+        <select id="city" name="city" required>
+            <option value="">Select City</option>
+            <option value="newyork">New York</option>
+            <option value="london">London</option>
+            <option value="tokyo">Tokyo</option>
+        </select>
+        </p>
+
+        <p>
+        <label for="hobbies">Hobbies:</label><br/>
+        <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+        <label for="hobby1">Reading Books</label><br/>
+        <input type="checkbox" id="hobby2" name="hobbies" value="traveling">
+        <label for="hobby2">Traveling</label><br/>
+        <input type="checkbox" id="hobby3" name="hobbies" value="gaming">
+        <label for="hobby3">Gaming</label><br/>
+       </textarea>
+      </p>
+
+      <p>
+        <label for="pic">Profile pic:</label><br/>
+       <input type="file" id="pic" name="pic" accept="image/*" required>
+      </p>
+
+      <p>
+        <label for="exp">Experience (years):</label><br/>
+       <input type="range" id="exp" name="exp" min="0" max="20" required value="1">
+      </p>
+
+      <p>
+        <label for="color">Favorite Color:</label><br/>
+     <input type="color" id="color" name="color" required>
+      </p>
+
+      <p>
+        <label for="about">About you:</label><br/>
+     <textarea id="about" name="about" rows="4" cols="50" required></textarea>
+      </p>
+
+      <p>
+        <label for="terms">Accept Terms and Conditions:</label>
+        <input type="checkbox" id="terms" name="terms" required>
+      </p>
+</fieldset>
+<button type="submit" value="Create Account">Create Account</button>
+</form>
+</body>
+</html>
