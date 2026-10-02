@@ -1,0 +1,618 @@
+/* ========================================
+   LIFEOS — AI PERSONAL LIFE OS
+   Modern 2027 Landing Page
+   ======================================== */
+
+
+/* ---------- Global Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b12;
+    color: #f4f7fb;
+    line-height: 1.6;
+}
+
+
+/* ---------- Reusable Elements ---------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    color: #a9b2c3;
+}
+
+
+/* ---------- Header ---------- */
+
+body > header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 7%;
+
+    background: rgba(8, 11, 18, 0.85);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* ---------- Logo ---------- */
+
+body > header > h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+/* ---------- Navigation ---------- */
+
+body > header nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+body > header nav a {
+    color: #a9b2c3;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+body > header nav a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   MAIN
+   ======================================== */
+
+main {
+    width: 100%;
+}
+
+
+/* ---------- General Section ---------- */
+
+main > section {
+    min-height: 100vh;
+    padding: 120px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* ========================================
+   HOME / HERO
+   ======================================== */
+
+#home {
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(99, 102, 241, 0.20),
+            transparent 35%
+        );
+}
+
+#home::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(59, 130, 246, 0.08);
+
+    filter: blur(80px);
+
+    top: 20%;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+#home header {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    margin: auto;
+}
+
+#home header > p:first-child {
+    color: #8b9cff;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+#home h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+#home header > p:not(:first-child) {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    font-size: 1.15rem;
+}
+
+
+/* ---------- Hero Button ---------- */
+
+#home a {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+    color: #080b12;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+#home a:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(255, 255, 255, 0.15);
+}
+
+
+/* ========================================
+   SECTION HEADERS
+   ======================================== */
+
+main section > header {
+    max-width: 750px;
+
+    margin-bottom: 60px;
+}
+
+main section > header h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+main section > header p {
+    font-size: 1.05rem;
+}
+
+
+/* ========================================
+   FEATURES
+   ======================================== */
+
+#features {
+    background: #0b0f18;
+}
+
+#features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+#features > header {
+    grid-column: 1 / -1;
+}
+
+#features article {
+    padding: 35px;
+
+    min-height: 220px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.015)
+        );
+
+    transition: 0.35s ease;
+}
+
+#features article:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255,255,255,0.18);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.09),
+            rgba(255,255,255,0.025)
+        );
+}
+
+#features article h3 {
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+}
+
+#features article p {
+    max-width: 450px;
+}
+
+
+/* ========================================
+   HOW IT WORKS
+   ======================================== */
+
+#how-it-works {
+    background: #080b12;
+}
+
+#how-it-works ol {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    counter-reset: steps;
+}
+
+#how-it-works li {
+    position: relative;
+
+    padding: 35px 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+#how-it-works li::before {
+    counter-increment: steps;
+
+    content: "0" counter(steps);
+
+    display: block;
+
+    font-size: 0.8rem;
+
+    color: #8b9cff;
+
+    margin-bottom: 35px;
+}
+
+#how-it-works h3 {
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   DASHBOARD
+   ======================================== */
+
+#dashboard {
+    background: #0b0f18;
+}
+
+#dashboard {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+#dashboard > header {
+    grid-column: 1 / -1;
+}
+
+#dashboard article {
+    padding: 35px;
+
+    min-height: 180px;
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(255,255,255,0.035);
+
+    transition: 0.3s ease;
+}
+
+#dashboard article:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255,255,255,0.06);
+}
+
+#dashboard article h3 {
+    color: #a9b2c3;
+
+    font-size: 1rem;
+
+    margin-bottom: 25px;
+}
+
+#dashboard article p {
+    color: #ffffff;
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   ABOUT
+   ======================================== */
+
+#about {
+    max-width: 1000px;
+
+    margin: auto;
+
+    background: #080b12;
+}
+
+#about p {
+    max-width: 750px;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   CONTACT / CTA
+   ======================================== */
+
+#contact {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(99,102,241,0.15),
+            transparent 45%
+        );
+}
+
+#contact header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact > a {
+    align-self: center;
+
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+    color: #080b12;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+#contact > a:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(255,255,255,0.15);
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+body > footer {
+    padding: 50px 7%;
+
+    background: #05070c;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+body > footer nav ul {
+    display: flex;
+
+    gap: 25px;
+}
+
+body > footer nav a {
+    color: #8c96a8;
+
+    font-size: 0.9rem;
+
+    transition: 0.3s ease;
+}
+
+body > footer nav a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+
+    body > header {
+        padding: 18px 5%;
+    }
+
+    body > header nav ul {
+        gap: 15px;
+    }
+
+    main > section {
+        padding: 100px 5%;
+    }
+
+    #features {
+        grid-template-columns: 1fr;
+    }
+
+    #how-it-works ol {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 650px) {
+
+    body > header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    body > header nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    main > section {
+        min-height: auto;
+
+        padding: 90px 6%;
+    }
+
+    #home {
+        min-height: 90vh;
+    }
+
+    #home h2 {
+        font-size: 3rem;
+
+        letter-spacing: -2px;
+    }
+
+    #home header > p:not(:first-child) {
+        font-size: 1rem;
+    }
+
+    #how-it-works ol {
+        grid-template-columns: 1fr;
+    }
+
+    #dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    #dashboard > header {
+        grid-column: auto;
+    }
+
+    body > footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    body > footer nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+a:focus-visible {
+    outline: 3px solid #ffffff;
+
+    outline-offset: 4px;
+}
